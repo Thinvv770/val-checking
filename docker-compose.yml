@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   bot:
-    image: ghcr.io/thinvv770/val-checking
+    image: ghcr.io/thinvv770/val-checking/val-checking
     restart: unless-stopped
     ports:
       - 6002:6002

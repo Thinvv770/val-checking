@@ -20,8 +20,8 @@ jobs:
       - name: Build and Push Image
         run: |
           docker buildx build \
-                  --tag ghcr.io/thinvv770/val-checking:latest \
-                  --tag ghcr.io/thinvv770/val-checking:"$GITHUB_SHA" \
+                  --tag ghcr.io/thinvv770/val-checking/val-checking:latest \
+                  --tag ghcr.io/thinvv770/val-checking/val-checking:"$GITHUB_SHA" \
                   --platform linux/amd64,linux/arm64/v8 \
                   --file ./Dockerfile \
                   --output type=image,push=true .
