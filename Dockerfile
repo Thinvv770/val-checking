@@ -8,6 +8,7 @@ COPY languages /usr/app/languages
 COPY misc /usr/app/misc
 COPY valorant /usr/app/valorant
 
+COPY config.json /usr/app
 COPY package.json /usr/app
 COPY package-lock.json /usr/app
 
