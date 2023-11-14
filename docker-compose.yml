@@ -4,6 +4,8 @@ services:
   bot:
     image: ghcr.io/thinvv770/val-checking/val-checking
     restart: unless-stopped
+    env_file:
+      - .env
     ports:
       - 6002:6002
     volumes:
