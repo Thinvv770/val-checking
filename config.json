@@ -38,7 +38,7 @@
   "notice": "",
   "onlyShowNoticeOnce": true,
   "maintenanceMode": false,
-  "githubToken": "",
+  "githubToken": "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",
   "logToChannel": "",
   "logFrequency": "*/10 * * * * *",
   "logUrls": false
