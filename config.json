@@ -1,5 +1,5 @@
 {
-  "token": "MTE3MzgyOTc0MjY1OTY0OTYyNw.GHTWaf.jdb180FSAQ-8ECtwfmWiNBKJn3qJXJeUvz0QVs",
+  "token": "process.env.BOT_TOKEN",
   "fetchSkinPrices": true,
   "fetchSkinRarities": true,
   "localiseText": true,
@@ -38,7 +38,7 @@
   "notice": "",
   "onlyShowNoticeOnce": true,
   "maintenanceMode": false,
-  "githubToken": "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",
+  "githubToken": "process.env.GITHUB_TOKEN",
   "logToChannel": "",
   "logFrequency": "*/10 * * * * *",
   "logUrls": false

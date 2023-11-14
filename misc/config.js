@@ -1,4 +1,5 @@
 import fs from "fs";
+import 'dotenv/config';
 
 export let config = {};
 export default config;
@@ -19,8 +20,14 @@ export const loadConfig = (filename="config.json") => {
         return;
     }
 
+    const json = JSON.parse(
+        loadedConfig.replace(/process\.env\.(\w+)/g, (_, key) => {
+          return process.env[key];
+        })
+      );
+
     try {
-        loadedConfig = JSON.parse(loadedConfig);
+        loadedConfig = json;
     } catch (e) {return console.error(`Could not JSON parse ${filename}! Is it corrupt?`, e)}
 
     if(!loadedConfig.token || loadedConfig.token === "token goes here")
@@ -29,7 +36,7 @@ export const loadConfig = (filename="config.json") => {
     loadedConfig.fetchSkinPrices = loadedConfig.showSkinPrices;
     loadedConfig.fetchSkinRarities = loadedConfig.showSkinRarities;
 
-    applyConfig(loadedConfig, "token", "token goes here");
+    applyConfig(loadedConfig, "token", "process.env.BOT_TOKEN");
     applyConfig(loadedConfig, "fetchSkinPrices", true);
     applyConfig(loadedConfig, "fetchSkinRarities", true);
     applyConfig(loadedConfig, "localiseText", true);
@@ -68,7 +75,7 @@ export const loadConfig = (filename="config.json") => {
     applyConfig(loadedConfig, "notice", "");
     applyConfig(loadedConfig, "onlyShowNoticeOnce", true);
     applyConfig(loadedConfig, "maintenanceMode", false);
-    applyConfig(loadedConfig, "githubToken", "");
+    applyConfig(loadedConfig, "githubToken", "process.env.GITHUB_TOKEN");
     applyConfig(loadedConfig, "logToChannel", "");
     applyConfig(loadedConfig, "logFrequency", "*/10 * * * * *");
     applyConfig(loadedConfig, "logUrls", false);
