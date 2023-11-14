@@ -395,7 +395,7 @@ export const fetchRiotClientVersion = async (attempt=1) => {
     }
 
     const headers = {
-        "User-Agent": "Thinvv770/val-checking",
+        "User-Agent": "thinvv770/val-checking",
         "X-GitHub-Api-Version": "2022-11-28",
     };
     if(config.githubToken) headers["Authorization"] = `Bearer ${config.githubToken}`;
