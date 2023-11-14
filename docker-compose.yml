@@ -2,11 +2,11 @@ version: '3.8'
 
 services:
   bot:
-    image: ghcr.io/giorgi-o/skinpeek/skinpeek
+    image: ghcr.io/Thinvv770/val-checking
     restart: unless-stopped
     ports:
       - 6002:6002
     volumes:
       - ./config.json:/usr/app/config.json
       - ./data:/usr/app/data
-    container_name: skinpeek_bot
+    container_name: val-checking

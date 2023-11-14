@@ -555,7 +555,7 @@ client.on("messageCreate", async (message) => {
                 await sendShardMessage({ type: "checkAlerts" });
                 await message.reply("Told shard 0 to start checking alerts!");
             }
-        } else if (content === "!stop skinpeek") {
+        } else if (content === "!stop val-checking") {
             return client.destroy();
         } else if (content === "!update") {
             console.log("Starting git pull...")
