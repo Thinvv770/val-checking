@@ -11,8 +11,6 @@ COPY valorant /usr/app/valorant
 COPY package.json /usr/app
 COPY package-lock.json /usr/app
 
-COPY config.json /usr/app/
-
 COPY sharding.js /usr/app/
 COPY SkinPeek.js /usr/app/
 COPY KeepAlive.js /usr/app/
